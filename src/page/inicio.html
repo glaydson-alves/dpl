@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <!-- font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +28,36 @@
                 <button class="btn-historico"><i class="fa-solid fa-clock-rotate-left"></i>Historico</button>
             </div>
         </div>
-
     </section>
-    
+    <section class="registro">
+
+        <div class="registro-top">
+            <img src="../img/logo.png" alt="img-logo">
+        </div>
+
+        <div class="registro-bottom">
+
+            <form id="formulario" action="#" class="container pt-5 needs-validation" novalidate>
+                <div class="mb-3">
+                    <h1 class="d-flex justify-content-center">Dados do serviço</h1>
+                </div>
+                <section>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="integrante" placeholder="Integrantes da equipe">
+                        <label for="floatingInput"><i class="fa-solid fa-user-group"></i> Integrantes da equipe</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="local" placeholder="Local de serviço">
+                        <label for="floatingInput"><i class="fa-solid fa-location-dot"></i> Local de serviço</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="veiculo" placeholder="Indentificação do Veículo">
+                        <label for="floatingInput"><i class="fa-solid fa-car"></i> Indentificação do Veículo</label>
+                    </div>
+            </form>
+        </div>
+    </section>    
     
 </body>
 </html>
