@@ -188,9 +188,25 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease all;
 }
-
+.img-formulario{
+  display: flex;
+  justify-content: center;
+}
+.img-formulario > img{
+  width: 200px;
+}
+.img-segundo-formulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #3f3f3f;
+}
+.img-segundo-formulario > img{
+  width: 200px;
+}
 form > div {
-  margin-top: 40px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .input-container {
