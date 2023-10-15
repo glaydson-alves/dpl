@@ -67,7 +67,7 @@
 .btn-historico{
   flex: 1; /* Usei flex para que os botões se expandam para preencher o espaço disponível */
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 20px;
   border: none;
   outline: none;
   box-shadow:  1px 1px 4px 1px #ccc;
@@ -144,11 +144,12 @@
 .registro-bottom{
   display: flex;
   justify-content: center;
-  /* height: calc(100% - 100px);
-  overflow-y: scroll; */
+  flex: 1;
+  overflow-y: auto;
 }
+
 #form2{
-  height: 50%;
+  height: 25%;
   overflow-y: scroll;
 }
 
@@ -254,18 +255,11 @@ input[type="text"] {
   font-size: 16px;
 }
 
-input[type="file"] {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  /* position: absolute; Remova esta linha */
-}
-
 button {
   color: #fff;
   border: none;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
   transition: 0.3s ease all;
@@ -275,17 +269,70 @@ button {
   background-color: var(--corSecundaria);
 }
 #segundo-formulario {
-  /* Remova 'position: absolute;' */
-  height: 100%; /* Defina a altura como 100% para ocupar a tela inteira */
+  height: 100%;
   display: none;
   animation: slideFromRight 0.5s ease forwards;
   overflow: hidden;
 }
+.card-form{
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  background-color: var(--corPrincipal);
+}
+.container-info{
+  width: calc(100% - 100px);
+  background-color: #ccc;
+  border-radius: 0px 20px 20px 0;
+}
+
+input[type="file"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.input-container-img{
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 20px 5px rgba(100, 100, 100, 0.1);
+}
+/* .input-container-img input{
+  opacity: 0;
+} */
+.input-container-img img{
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+/* .input-container-img div{
+  position: relative;
+  height: 30px;
+  margin-top: -30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.input-container-img div span{
+  font-size: 30px;
+} */
+.container-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .btn-voltar,
 .btn-enviar{
   width: 49%;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 .fa-backward-step,
 .fa-paper-plane,

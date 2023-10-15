@@ -4,7 +4,7 @@ function validarPrimeiroFormulario() {
     const veiculo = document.getElementById('veiculo1').value.trim();
 
 if (equipe === '' || servico === '' || veiculo === '') {
-    alert('Preencha todos os campos do primeiro formulário.');
+     Swal.fire('Preencha todos os campos!')
 } else {
     document.getElementById('primeiro-formulario').style.animation = 'slideToLeft 0.5s ease forwards';
     setTimeout(function() {
@@ -52,5 +52,30 @@ function voltarParaInicio() {
     }, 500);
 }
 
+// PARA O SEGUNDO FORMULARIO, PRE-VIZUALIZAÇÃO DAS IMAGENS
+
+// function preview(id){
+//     document.querySelector("#"+id).addEventListener("change", function(e){
+//         if e.target.files.length == 0){
+//             return
+//         }
+//         let file = e.target.files[0]
+//         let url = url.createObjectURL(file)
+//         document.querySelector("#"+id+"-preview div").innerText = file.name
+//         document.querySelector("#"+id+"-preview img").src = file.name
+//     })
+// }
+
+// preview("file")
+
+let img = document.getElementById("img")
+let input = document.getElementById("img1")
+
+input.onchange = (e) =>{
+    if(input.files[0]){
+    img.src = URL.createObjectURL(input.files[0])
+    img.style.borderRadius = "10%"
+    img.style.width = "100px"}
+}
 
 
