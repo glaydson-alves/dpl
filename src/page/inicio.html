@@ -65,119 +65,120 @@
                             <label for="veiculo1" class="label"><i class="fa-solid fa-car"></i>Identificação do Veículo</label>
                         </div>
                         
-                        <button class="btn-proximo" type="button" onclick="validarPrimeiroFormulario()"><i class="fa-solid fa-forward-step"></i>Próximo</button>
+                        <button class="btn-proximo" type="button" onclick="validarPrimeiroFormulario()"><i class="fa-solid fa-chevron-right"></i>Próximo</button>
                     </form>
                 </div>
             
                 <div id="segundo-formulario" style="display: none;">
 
                     <div class="img-segundo-formulario">
+                        
                         <img src="../img/formulario.png" alt="">
-                        <h5>Regras de Ouro</h5>
+                        
                     </div>
 
                     <form id="form2">
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
-                                <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
-                                
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
-                            </div>
-
-                            <div class="container-info">
-                                <p></p>
-                                <button class="btn-info"><i class="fa-regular fa-circle-question"></i>Desligar</button>
-                            </div>
+                        <div class="form-rotulo">
+                            <h4>Regras de Ouro</h4>
+                            <span>ver tudo<i class="fa-solid fa-chevron-right"></i></span>
                         </div>
+                        <div class="form2" >
+                            
+                            <div class="card-form">
 
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" required>
-                                <label for="img1" id="img-previsu"></label>
-                                <img id="img" src="../img/choose.png">
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
+
+                                <div class="container-info">
+                                    <span>Desligar</span>
+                                    <button class="btn-info" id="btnDetalhesDesligar">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
                             </div>
 
-                            <div class="container-info">
-                                <p>Bloquear</p>
-                            </div>
-                        </div>
+                            <div class="card-form">
 
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" required>
-                                <label for="img1" id="img-previsu"></label>
-                                <img id="img" src="../img/choose.png">
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
-                            </div>
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
 
-                            <div class="container-info">
-                                <p>Sinalizar</p>
-                            </div>
-                        </div>
-
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" required>
-                                <label for="img1" id="img-previsu"></label>
-                                <img id="img" src="../img/choose.png">
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
+                                <div class="container-info">
+                                    <span>Bloquear</span>
+                                    <button class="btn-info" id="btnDetalhesBloquear">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
                             </div>
 
-                            <div class="container-info">
-                                <p>Testar</p>
-                            </div>
-                        </div>
+                            <div class="card-form">
 
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" required>
-                                <label for="img1" id="img-previsu"></label>
-                                <img id="img" src="../img/choose.png">
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
-                            </div>
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
 
-                            <div class="container-info">
-                                <p>Aterrar</p>
-                            </div>
-                        </div>
-
-                        <div class="card-form">
-                            <div class="input-container-img">
-                                <input type="file" id="img1" name="img" accept="image/*" required>
-                                <label for="img1" id="img-previsu"></label>
-                                <img id="img" src="../img/choose.png">
-                                <!-- <div>
-                                    <span>+</span>
-                                </div> -->
+                                <div class="container-info">
+                                    <span>Sinalizar</span>
+                                    <button class="btn-info" id="btnDetalhesSinalizar">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
                             </div>
 
-                            <div class="container-info">
-                                <p>Proteger</p>
-                            </div>
-                        </div>
+                            <div class="card-form">
 
-                        <div class="card-form">
-                            <div class="input-container">
-                                <textarea name="mensagem" name="mensagem" id="mensagem" placeholder="Observações"
-                                class="form-control remove"></textarea>
-                            <p class="text-end">Total de caracteres restantes <span id="restante">0</span>/100</p>
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
+
+                                <div class="container-info">
+                                    <span>Testar</span>
+                                    <button class="btn-info" id="btnDetalhesTestar">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="card-form">
+
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
+
+                                <div class="container-info">
+                                    <span>Aterrar</span>
+                                    <button class="btn-info" id="btnDetalhesAterrar">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="card-form">
+
+                                <div class="input-container-img">
+                                    <input type="file" id="img1" name="img" accept="image/*" capture="camera" required>
+                                    <label for="img1" id="img-previsu"><img id="img" src="../img/choose.png"></label>
+                                    
+                                </div>
+
+                                <div class="container-info">
+                                    <span>Proteger</span>
+                                    <button class="btn-info" id="btnDetalhesProteger">detalhes<i class="fa-regular fa-circle-question"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="card-form">
+                                <div class="input-container">
+                                    <textarea name="mensagem" name="mensagem" id="mensagem" placeholder="Observações"
+                                    class="form-control remove"></textarea>
+                                <p class="text-end">Total de caracteres restantes <span id="restante">0</span>/100</p>
+                                </div>
                             </div>
                         </div>
 
                     </form>
-                    <button class="btn-voltar" type="button" onclick="voltarPrimeiroFormulario()"><i class="fa-solid fa-backward-step"></i>Voltar</button>
+                    <button class="btn-voltar" type="button" onclick="voltarPrimeiroFormulario()"><i class="fa-solid fa-chevron-left"></i></i>Voltar</button>
 
                     <button class="btn-enviar" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
                 </div>

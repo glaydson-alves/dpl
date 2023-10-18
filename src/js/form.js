@@ -54,20 +54,6 @@ function voltarParaInicio() {
 
 // PARA O SEGUNDO FORMULARIO, PRE-VIZUALIZAÇÃO DAS IMAGENS
 
-// function preview(id){
-//     document.querySelector("#"+id).addEventListener("change", function(e){
-//         if e.target.files.length == 0){
-//             return
-//         }
-//         let file = e.target.files[0]
-//         let url = url.createObjectURL(file)
-//         document.querySelector("#"+id+"-preview div").innerText = file.name
-//         document.querySelector("#"+id+"-preview img").src = file.name
-//     })
-// }
-
-// preview("file")
-
 let img = document.getElementById("img")
 let input = document.getElementById("img1")
 
@@ -78,4 +64,78 @@ input.onchange = (e) =>{
     img.style.width = "100px"}
 }
 
+// Aqui mostra os alerts dos detalhes de cada Regra de Ouro
 
+const btnDetalhesDesligar = document.getElementById("btnDetalhesDesligar")
+const btnDetalhesBloquear = document.getElementById("btnDetalhesBloquear")
+const btnDetalhesSinalizar = document.getElementById("btnDetalhesSinalizar")
+const btnDetalhesTestar = document.getElementById("btnDetalhesTestar")
+const btnDetalhesAterrar = document.getElementById("btnDetalhesAterrar")
+const btnDetalhesProteger = document.getElementById("btnDetalhesProteger")
+
+
+btnDetalhesDesligar.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Desligar',
+        text: 'Consiste em desligar o circuito onde irão trabalhar.',
+        imageUrl: '../img/desligar.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
+
+btnDetalhesBloquear.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Bloquear',
+        text: 'Consiste em impedir que o circuito seja religado.',
+        imageUrl: '../img/bloquear.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
+
+btnDetalhesSinalizar.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Sinalizar',
+        text: 'Instalar alerta visual de que há pessoas trabalhando naquele circuito.',
+        imageUrl: '../img/sinalizar.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
+
+btnDetalhesTestar.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Testar',
+        text: 'Resalizar teste no circuito para verificar se o local de trabalho(circuito) está realmente sem passagem de energia.',
+        imageUrl: '../img/testar.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
+
+btnDetalhesAterrar.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Aterrar',
+        text: 'Instalar aterramento temporário à montande e à jusante para reforçar a condição de segurança em casos de energização acidental do circuito.',
+        imageUrl: '../img/aterrar.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
+
+btnDetalhesProteger.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Proteger',
+        text: 'Consiste em isolar suferfícies energizadas que estejam próximas ao eletricista ou oferecem risco de indução ou contato acidental com o circuito desenergizado.',
+        imageUrl: '../img/proteger.jpg',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+})
