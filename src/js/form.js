@@ -54,16 +54,65 @@ function voltarParaInicio() {
 
 // PARA O SEGUNDO FORMULARIO, PRE-VIZUALIZAÇÃO DAS IMAGENS
 
-let img = document.getElementById("img")
-let input = document.getElementById("img1")
+let imgDesligar = document.getElementById("imgDesligar")
+let inputDesligar = document.getElementById("inputDesligar")
 
-input.onchange = (e) =>{
-    if(input.files[0]){
-    img.src = URL.createObjectURL(input.files[0])
-    img.style.borderRadius = "10%"
-    img.style.width = "100px"}
+let imgBloquear = document.getElementById("imgBloquear")
+let inputBloquear = document.getElementById("inputBloquear")
+
+let imgSinalizar = document.getElementById("imgSinalizar")
+let inputSinalizar = document.getElementById("inputSinalizar")
+
+let imgTestar = document.getElementById("imgTestar")
+let inputTestar = document.getElementById("inputTestar")
+
+let imgAterrar = document.getElementById("imgAterrar")
+let inputAterrar = document.getElementById("inputAterrar")
+
+let imgProteger = document.getElementById("imgProteger")
+let inputProteger = document.getElementById("inputProteger")
+
+inputDesligar.onchange = (e) =>{
+    if(inputDesligar.files[0]){
+    imgDesligar.src = URL.createObjectURL(inputDesligar.files[0])
+    imgDesligar.style.borderRadius = "10%"
+    imgDesligar.style.width = "100px"}
 }
 
+inputBloquear.onchange = (e) =>{
+    if(inputBloquear.files[0]){
+    imgBloquear.src = URL.createObjectURL(inputBloquear.files[0])
+    imgBloquear.style.borderRadius = "10%"
+    imgBloquear.style.width = "100px"}
+}
+
+inputSinalizar.onchange = (e) =>{
+    if(inputSinalizar.files[0]){
+    imgSinalizar.src = URL.createObjectURL(inputSinalizar.files[0])
+    imgSinalizar.style.borderRadius = "10%"
+    imgSinalizar.style.width = "100px"}
+}
+
+inputTestar.onchange = (e) =>{
+    if(inputTestar.files[0]){
+    imgTestar.src = URL.createObjectURL(inputTestar.files[0])
+    imgTestar.style.borderRadius = "10%"
+    imgTestar.style.width = "100px"}
+}
+
+inputAterrar.onchange = (e) =>{
+    if(inputAterrar.files[0]){
+    imgAterrar.src = URL.createObjectURL(inputAterrar.files[0])
+    imgAterrar.style.borderRadius = "10%"
+    imgAterrar.style.width = "100px"}
+}
+
+inputProteger.onchange = (e) =>{
+    if(inputProteger.files[0]){
+    imgProteger.src = URL.createObjectURL(inputProteger.files[0])
+    imgProteger.style.borderRadius = "10%"
+    imgProteger.style.width = "100px"}
+}
 // Aqui mostra os alerts dos detalhes de cada Regra de Ouro
 
 const btnDetalhesDesligar = document.getElementById("btnDetalhesDesligar")
