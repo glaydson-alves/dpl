@@ -1,3 +1,5 @@
+// VALIDAÇÕES PARA O PRIMEIRO FORMULARIO
+
 function validarPrimeiroFormulario() {
     const equipe = document.getElementById('equipe1').value.trim();
     const servico = document.getElementById('servico1').value.trim();
@@ -54,65 +56,154 @@ function voltarParaInicio() {
 
 // PARA O SEGUNDO FORMULARIO, PRE-VIZUALIZAÇÃO DAS IMAGENS
 
-let imgDesligar = document.getElementById("imgDesligar")
-let inputDesligar = document.getElementById("inputDesligar")
+document.addEventListener("DOMContentLoaded", function() {
+    
+let imgDesligar = document.getElementById("imgDesligar");
+let inputDesligar = document.getElementById("inputDesligar");
 
-let imgBloquear = document.getElementById("imgBloquear")
-let inputBloquear = document.getElementById("inputBloquear")
+let imgBloquear = document.getElementById("imgBloquear");
+let inputBloquear = document.getElementById("inputBloquear");
 
-let imgSinalizar = document.getElementById("imgSinalizar")
-let inputSinalizar = document.getElementById("inputSinalizar")
+let imgSinalizar = document.getElementById("imgSinalizar");
+let inputSinalizar = document.getElementById("inputSinalizar");
 
-let imgTestar = document.getElementById("imgTestar")
-let inputTestar = document.getElementById("inputTestar")
+let imgTestar = document.getElementById("imgTestar");
+let inputTestar = document.getElementById("inputTestar");
 
-let imgAterrar = document.getElementById("imgAterrar")
-let inputAterrar = document.getElementById("inputAterrar")
+let imgAterrar = document.getElementById("imgAterrar");
+let inputAterrar = document.getElementById("inputAterrar");
 
-let imgProteger = document.getElementById("imgProteger")
-let inputProteger = document.getElementById("inputProteger")
+let imgProteger = document.getElementById("imgProteger");
+let inputProteger = document.getElementById("inputProteger");
 
-inputDesligar.onchange = (e) =>{
-    if(inputDesligar.files[0]){
-    imgDesligar.src = URL.createObjectURL(inputDesligar.files[0])
-    imgDesligar.style.borderRadius = "10%"
-    imgDesligar.style.width = "100px"}
+inputDesligar.onchange = (e) => {
+    if (inputDesligar.files[0]) {
+        imgDesligar.src = URL.createObjectURL(inputDesligar.files[0]);
+        imgDesligar.style.borderRadius = "10%";
+        imgDesligar.style.width = "100px";
+    }
 }
 
-inputBloquear.onchange = (e) =>{
-    if(inputBloquear.files[0]){
-    imgBloquear.src = URL.createObjectURL(inputBloquear.files[0])
-    imgBloquear.style.borderRadius = "10%"
-    imgBloquear.style.width = "100px"}
+
+inputBloquear.onchange = (e) => {
+    if (inputBloquear.files[0]) {
+        imgBloquear.src = URL.createObjectURL(inputBloquear.files[0]);
+        imgBloquear.style.borderRadius = "10%";
+        imgBloquear.style.width = "100px";
+    }
 }
 
-inputSinalizar.onchange = (e) =>{
-    if(inputSinalizar.files[0]){
-    imgSinalizar.src = URL.createObjectURL(inputSinalizar.files[0])
-    imgSinalizar.style.borderRadius = "10%"
-    imgSinalizar.style.width = "100px"}
+inputSinalizar.onchange = (e) => {
+    if (inputSinalizar.files[0]) {
+        imgSinalizar.src = URL.createObjectURL(inputSinalizar.files[0]);
+        imgSinalizar.style.borderRadius = "10%";
+        imgSinalizar.style.width = "100px";
+    }
 }
 
-inputTestar.onchange = (e) =>{
-    if(inputTestar.files[0]){
-    imgTestar.src = URL.createObjectURL(inputTestar.files[0])
-    imgTestar.style.borderRadius = "10%"
-    imgTestar.style.width = "100px"}
+inputTestar.onchange = (e) => {
+    if (inputTestar.files[0]) {
+        imgTestar.src = URL.createObjectURL(inputTestar.files[0]);
+        imgTestar.style.borderRadius = "10%";
+        imgTestar.style.width = "100px";
+    }
 }
 
-inputAterrar.onchange = (e) =>{
-    if(inputAterrar.files[0]){
-    imgAterrar.src = URL.createObjectURL(inputAterrar.files[0])
-    imgAterrar.style.borderRadius = "10%"
-    imgAterrar.style.width = "100px"}
+inputAterrar.onchange = (e) => {
+    if (inputAterrar.files[0]) {
+        imgAterrar.src = URL.createObjectURL(inputAterrar.files[0]);
+        imgAterrar.style.borderRadius = "10%";
+        imgAterrar.style.width = "100px";
+    }
 }
 
-inputProteger.onchange = (e) =>{
-    if(inputProteger.files[0]){
-    imgProteger.src = URL.createObjectURL(inputProteger.files[0])
-    imgProteger.style.borderRadius = "10%"
-    imgProteger.style.width = "100px"}
+inputProteger.onchange = (e) => {
+    if (inputProteger.files[0]) {
+        imgProteger.src = URL.createObjectURL(inputProteger.files[0]);
+        imgProteger.style.borderRadius = "10%";
+        imgProteger.style.width = "100px";
+    }
 }
+
+// Adição de validação ao botão "Enviar"
+document.getElementById("btnEnviar").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const missingFields = [];
+
+    if (!inputDesligar.files[0]) {
+        missingFields.push("Desligar");
+    }
+    if (!inputBloquear.files[0]) {
+        missingFields.push("Bloquear");
+    }
+    if (!inputSinalizar.files[0]) {
+        missingFields.push("Sinalizar");
+    }
+    if (!inputTestar.files[0]) {
+        missingFields.push("Testar");
+    }
+    if (!inputAterrar.files[0]) {
+        missingFields.push("Aterrar");
+    }
+    if (!inputProteger.files[0]) {
+        missingFields.push("Proteger");
+    }
+
+    if (missingFields.length > 0) {
+        Swal.fire({
+            icon: 'error',
+            text:"Os seguintes campos de imagem estão vazios: " + missingFields.join(", ")})
+    } else {
+        // Todos os campos de imagem estão preenchidos; você pode prosseguir com o envio do formulário.
+        
+        const equipe1 = document.getElementById("equipe1").value;
+        const servico1 = document.getElementById("servico1").value;
+        const veiculo1 = document.getElementById("veiculo1").value;
+
+        // Obter a data e hora atual
+        const dataHora = new Date();
+
+        // Criar um objeto com os dados a serem salvos
+        const dadosFormulario1 = {
+            equipe: equipe1,
+            servico: servico1,
+            veiculo: veiculo1,
+            dataHora: dataHora.toLocaleString()
+        };
+
+        // Obter o histórico atual do localStorage (se existir)
+        const historico = JSON.parse(localStorage.getItem("historico")) || [];
+
+        // Adicionar os novos dados ao histórico
+        historico.push(dadosFormulario1);
+
+        // Salvar o histórico atualizado no localStorage
+        localStorage.setItem("historico", JSON.stringify(historico));
+
+        // Atualizar a exibição do histórico na página
+        atualizarHistorico();
+        
+        
+    }
+});
+});
+atualizarHistorico();
+
+function atualizarHistorico() {
+    const historico = JSON.parse(localStorage.getItem("historico")) || [];
+
+    const listaHistorico = document.getElementById("lista-historico");
+    listaHistorico.innerHTML = "";
+
+    for (const item of historico) {
+        const listItem = document.createElement("li");
+        listItem.textContent = `Equipe: ${item.equipe}, Serviço: ${item.servico}, Veículo: ${item.veiculo}, Data e Hora: ${item.dataHora}`;
+        listaHistorico.appendChild(listItem);
+    }
+}
+
+
 // Aqui mostra os alerts dos detalhes de cada Regra de Ouro
 
 const btnDetalhesDesligar = document.getElementById("btnDetalhesDesligar")
@@ -188,3 +279,28 @@ btnDetalhesProteger.addEventListener("click", function() {
         imageAlt: 'Custom image',
       })
 })
+
+// PARA EXIBIR A SECTION HISTORICO
+
+
+function mostrarHistorico() {
+    
+    const registroBottom = document.querySelector('.registro-bottom');
+    registroBottom.style.display = 'none';
+
+    
+    const divHistorico = document.querySelector('.div-historico');
+    divHistorico.style.display = 'block';
+}
+
+const registroBtnHistorico = document.querySelector('.registroBtnHistorico');
+registroBtnHistorico.addEventListener('click', mostrarHistorico);
+
+const btnIniciar = document.querySelector('.btn-iniciar');
+btnIniciar.addEventListener('click', iniciar);
+
+
+
+
+
+

@@ -180,10 +180,23 @@
                     </form>
                     <button class="btn-voltar" type="button" onclick="voltarPrimeiroFormulario()"><i class="fa-solid fa-chevron-left"></i></i>Voltar</button>
 
-                    <button class="btn-enviar" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
+                    <button id="btnEnviar" class="btn-enviar" type="submit"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
+
                 </div>
             </div>
 
+        </div>
+        
+        <div class="div-historico" style="display: none;"> 
+
+            <div id="historico">
+    
+                <ul id="lista-historico">
+                  
+                </ul>
+    
+            </div>
+            
         </div>
 
         <div class="registro-menu">
@@ -196,17 +209,9 @@
                 <span>Historico</span>
             </button>
         </div>
+
     </section>
 
-    <section class="section-historico" style="display: none;">
-        <div id="historico">
-
-            <ul id="lista-historico">
-              
-            </ul>
-
-        </div>
-    </section>
     
     <script src="../js/form.js"></script>
     
