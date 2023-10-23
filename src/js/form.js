@@ -6,7 +6,7 @@ function validarPrimeiroFormulario() {
     const veiculo = document.getElementById('veiculo1').value.trim();
 
 if (equipe === '' || servico === '' || veiculo === '') {
-     Swal.fire('Preencha todos os campos!')
+     Swal.fire({icon:'error', text: 'Preencha todos os campos!'})
 } else {
     document.getElementById('primeiro-formulario').style.animation = 'slideToLeft 0.5s ease forwards';
     setTimeout(function() {
