@@ -22,11 +22,11 @@ img {
 }
 
 .loader {
-    border: 6px solid #fff; 
-    border-top: 6px solid var(--corSecundaria); 
+    border: 3px solid #fff; 
+    border-top: 3px solid var(--corSecundaria); 
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     animation: spin 1.5s linear infinite;
     margin: 0 auto;
 }
