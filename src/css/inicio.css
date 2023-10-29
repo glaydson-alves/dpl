@@ -391,10 +391,10 @@ label{
 
 /* SECTION HISTORICO */
 #historico {
+  margin-top: 20px;
   z-index: 1;
-  border: 1px solid #ccc;
   padding: 10px;
-  height: 80vh;
+  height: 70vh;
   overflow-y: scroll;
 }
 
