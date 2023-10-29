@@ -29,13 +29,32 @@ setTimeout(function() {
 function iniciar() {
     const inicioSection = document.querySelector('.inicio');
     const registroSection = document.querySelector('.registro');
-
+    const historicoSection = document.querySelector(".div-historico")
+    const registroBottom = document.querySelector(".registro-bottom")
     inicioSection.classList.add('hidden');
 
-    setTimeout(function() {
-    inicioSection.style.display = 'none';
-    registroSection.style.display = 'block';}, 200);
+    if(historicoSection.style.display = "block"){
+
+        setTimeout(function() {
+        historicoSection.style.display = 'none';
+        inicioSection.style.display = 'none';
+        registroBottom.style.display = 'block';
+        registroSection.style.display = 'block';}, 200);
+    }
 }
+
+function historico() {
+    const inicioSection = document.querySelector('.inicio');
+    const registroSection = document.querySelector('.registro');
+    const historicoSection = document.querySelector(".div-historico");
+    const registroBottom = document.querySelector(".registro-bottom");
+
+    inicioSection.style.display = 'none';
+    registroBottom.style.display = 'none';
+    registroSection.style.display = 'block';
+    historicoSection.style.display = 'block';
+}
+
 
 function voltarParaInicio() {
     const inicioSection = document.querySelector('.inicio');
@@ -183,8 +202,16 @@ document.getElementById("btnEnviar").addEventListener("click", function (e) {
 
         // Atualizar a exibição do histórico na página
         atualizarHistorico();
-        
-        
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Enviado com sucesso!',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          setTimeout(()=>{
+            window.location.href = "../..";
+        }, 1500)
     }
 });
 });
@@ -197,11 +224,19 @@ function atualizarHistorico() {
     listaHistorico.innerHTML = "";
 
     for (const item of historico) {
-        const listItem = document.createElement("li");
-        listItem.textContent = `Equipe: ${item.equipe}, Serviço: ${item.servico}, Veículo: ${item.veiculo}, Data e Hora: ${item.dataHora}`;
-        listaHistorico.appendChild(listItem);
+        if (item) {
+            listaHistorico.innerHTML += `
+                <li>
+                    <span>Equipe: ${item.equipe}</span>
+                    <span>Serviço: ${item.servico}</span>
+                    <span>Veículo: ${item.veiculo}</span>
+                    <span>Data e Hora: ${item.dataHora}</span>
+                </li>`;
+        }
     }
 }
+
+ 
 
 
 // Aqui mostra os alerts dos detalhes de cada Regra de Ouro
