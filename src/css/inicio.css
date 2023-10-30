@@ -13,13 +13,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-/* body{
-    background-color: var(--corTelaGrande);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3em;
-} */
+
 
 /* primeira section */
 
@@ -442,3 +436,48 @@ label{
     transform: translateX(-100%);
   }
 }  
+
+@media (min-width: 1104px){
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inicio{
+    max-width: 768px;
+  }
+  
+  .inicio-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 768px;
+    height: 30vh;
+  }
+  .registro-top{
+    max-width: 768px;
+  }
+  
+  .registro-bottom{
+    max-width: 768px;
+  }
+  .registro-menu {
+    max-width: 768px;
+  }
+  .registro-menu{
+    max-width: 768px;
+  }
+
+  .container {
+    max-width: 768px;
+    width: 768px;
+    height: 90vh;
+  }
+  .div-historico{
+    max-width: 768px; 
+    width: 768px;
+  }
+}
