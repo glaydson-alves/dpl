@@ -285,7 +285,7 @@ btnDetalhesSinalizar.addEventListener("click", function() {
 btnDetalhesTestar.addEventListener("click", function() {
     Swal.fire({
         title: 'Testar',
-        text: 'Resalizar teste no circuito para verificar se o local de trabalho(circuito) está realmente sem passagem de energia.',
+        text: 'Realizar teste no circuito para verificar se o local de trabalho(circuito) está realmente sem passagem de energia.',
         imageUrl: '../img/testar.jpg',
         imageWidth: 200,
         imageHeight: 200,
@@ -307,7 +307,7 @@ btnDetalhesAterrar.addEventListener("click", function() {
 btnDetalhesProteger.addEventListener("click", function() {
     Swal.fire({
         title: 'Proteger',
-        text: 'Consiste em isolar suferfícies energizadas que estejam próximas ao eletricista ou oferecem risco de indução ou contato acidental com o circuito desenergizado.',
+        text: 'Consiste em isolar superfícies energizadas que estejam próximas ao eletricista ou oferecem risco de indução ou contato acidental com o circuito desenergizado.',
         imageUrl: '../img/proteger.jpg',
         imageWidth: 200,
         imageHeight: 200,
