@@ -1,4 +1,6 @@
 # web app dpl
+### link para teste
+![qrcode-dpl-fotor-2024010519813](https://github.com/glaydson-alves/dpl/assets/126728150/47d9e5e7-846b-405c-b6db-144cc444f215)
 
 ### Tela-1 (inicial)
 https://github.com/glaydson-alves/dpl/assets/126728150/de6942e0-b2ea-4ff1-960f-e96e04b214a1
